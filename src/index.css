@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* ----- Mode clair par défaut ----- */
+body {
+  background-color: #ffffff;  /* fond clair global */
+  color: #000000;             /* texte noir */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Conteneur principal */
+.main-content {
+  background-color: transparent; /* transparent pour laisser voir le fond du body */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Cartes, blocs, etc. */
+.card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* ----- Mode sombre activé ----- */
+body.dark-mode {
+  background-color: #121212; /* fond sombre global */
+  color: #f1f1f1;
+}
+
+/* conteneur principal : reste transparent ou légèrement assombri */
+body.dark-mode .main-content {
+  background-color: #1a1a1a; /* optionnel, sinon transparent */
+}
+
+/* Cartes ou éléments internes */
+body.dark-mode .card {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+/* Boutons, liens, etc. (exemple) */
+body.dark-mode button {
+  background-color: #333;
+  color: #fff;
+}
